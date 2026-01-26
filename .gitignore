@@ -1,0 +1,4 @@
+server-configs/*.conf
+server-configs/*.key
+*.env
+.DS_Store
