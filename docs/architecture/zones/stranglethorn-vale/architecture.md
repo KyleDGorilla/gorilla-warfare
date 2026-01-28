@@ -164,13 +164,93 @@ creature (spawn instances)
 - [Creature Analysis Queries](queries/02-creature-analysis.sql)
 
 
+
+### Phase 1C: Gameobject Analysis ✅
+**Completed**: January 27, 2026
+
+**Objective**: Analyze interactive objects, resource distribution, and quest objects in STV.
+
+**Key Findings**:
+
+1. **Gameobject Population**: 1,979 total gameobjects
+   - Nearly 1:1 ratio with creatures (1,979 objects vs 1,572 creatures)
+   - Unusual: most zones have more creatures than objects
+   - Indicates resource-gathering focused design
+
+2. **Resource Node Distribution** (994 total - 50% of all gameobjects):
+   
+   **Mining Nodes** (434 spawns):
+   - Gold Vein: 116 (top resource spawn)
+   - Silver Vein: 94
+   - Iron Deposit: 86
+   - Mithril Deposit: 30
+   - Truesilver Deposit: 30 (rare, high-tier)
+   - Tin Vein: 8 (low-tier, scarce)
+   
+   **Herbalism Nodes** (560 spawns):
+   - Goldthorn: 93
+   - Kingsblood: 78
+   - Khadgar's Whisker: 77
+   - Liferoot: 68
+   - Stranglekelp: 67 (underwater)
+   - Wild Steelbloom: 52
+   - Fadeleaf: 28
+   - Purple Lotus: 27 (rare, high-tier)
+   
+   **Special Resources**:
+   - Giant Clam: 80 (underwater gathering)
+   - Fishing Pools: 126 (type 25 objects)
+
+3. **Tiered Resource Distribution Pattern**:
+   - Low-tier resources: Scarce (only 8 tin veins)
+   - Mid-tier resources: Abundant (68% of mining nodes)
+   - High-tier resources: Present but rare (14% of mining nodes)
+   - **Architectural Principle**: Spawn count inversely correlates with resource tier/rarity
+
+4. **Multi-Environment Design**:
+   - **Land**: Standard ore and herb nodes
+   - **Underwater**: Stranglekelp (67), Giant Clam (80)
+   - **Coastal**: Extensive fishing pools (126 total across 5 types)
+   - Demonstrates zone supports diverse gameplay environments
+
+5. **Event Overlay System** (132 seasonal objects - 6.7% of total):
+   - Brewfest: Festive Mug (70), Toasting Goblet (62), Festive Keg (22)
+   - Midsummer Fire Festival: Decorative streamers, candles
+   - Halloween: Hanging skull lights
+   - Events augment base content without replacing it
+   - **Architectural Pattern**: Layered content system (permanent + temporary)
+
+6. **Physical Quest Object Design**:
+   - Books: "Fall of Gurubashi", "Moon Over the Vale" (lore objects)
+   - Containers: Kurzen Supplies, Cozzle's Footlocker (quest items)
+   - Landmarks: The Holy Spring (discovery objective)
+   - Trophies: Various trophy skulls (collection quests)
+   - **Design Philosophy**: 3D spatial exploration over dialogue-only quests
+
+7. **Gameobject Template Relationship** (Confirmed):
+   - `gameobject.id` → `gameobject_template.entry` (type system)
+   - Same pattern as creature → creature_template
+   - One template = many spawn instances
+   - Example: "Gold Vein" (entry 1734) has 116 spawn instances across zone
+
+**Object Type Distribution**:
+- **Type 3 (Resource/Container)**: 994 spawns (50%)
+- **Type 25 (Fishing Pool)**: 126 spawns (6.4%)
+- **Type 5 (Generic/Decoration)**: 123 spawns (6.2%)
+- **Type 10 (Door/Activator)**: 22 spawns (1.1%)
+
+**Implications for Port Gurubashi**:
+- Consider unique custom resource spawns for player engagement
+- Neutral territory gathering rules (PvP-safe nodes during events?)
+- Physical quest objects for custom quest chains (trophies, markers)
+- Event decoration system can support custom celebrations
+- Resource tier should match zone level (30-45 appropriate items)
+
+**Artifacts**:
+- [Gameobject Analysis Queries](queries/04-gameobject-analysis.sql)
+
 ## Next Steps
 
-
-### Phase 1C: Gameobject Analysis (In Progress)
-- Identify interactive objects in zone
-- Analyze gameobject_template relationships
-- Document resource nodes (herbs, ore, chests)
 
 ### Phase 1D: Quest Analysis (Upcoming)
 - Identify quests in or related to STV
