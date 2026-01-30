@@ -1,10 +1,10 @@
-# Vanilla Gorilla - WoW 3.3.5a Private Server Project
+# Gorilla Warfare - WoW 3.3.5a Private Server Project
 
 > **Educational Portfolio Project**: This project demonstrates DevOps, cloud architecture, and game systems design skills for professional portfolio purposes. Not intended for commercial use.
 
 ## Project Overview
 
-Vanilla Gorilla is a custom World of Warcraft 3.3.5a private server showcasing hybrid cloud architecture, custom content development, and comprehensive technical documentation practices. This project serves as a case study in Solutions Architecture, demonstrating skills in:
+Gorilla Warfare is a custom World of Warcraft 3.3.5a private server showcasing hybrid cloud architecture, custom content development, and comprehensive technical documentation practices. This project serves as a case study in Solutions Architecture, demonstrating skills in:
 
 - Hybrid cloud infrastructure design (AWS + on-premises)
 - Database architecture and optimization
@@ -61,15 +61,15 @@ This project emphasizes documentation-as-code practices:
 ## Skills Demonstrated
 
 ### Cloud & Infrastructure
-- AWS services (EC2, S3, Route53, Lambda, EventBridge)
+- AWS services (EC2, S3, EBS)
+- CloudFlare (CDN)
 - Hybrid cloud architecture design
 - Cost optimization strategies
 - Infrastructure automation
 
 ### Development
-- Python application development
-- UI/UX design with CustomTkinter
-- CI/CD pipeline implementation
+- Python scripting and automation
+- MySQL schema modification and management
 - Version control and Git workflows
 
 ### Architecture & Documentation
@@ -82,14 +82,13 @@ This project emphasizes documentation-as-code practices:
 - MySQL/MariaDB optimization
 - Schema design and analysis
 - Legacy system documentation
-- Performance profiling
 
 ## Technology Stack
 
 - **Core Server**: AzerothCore (WoW 3.3.5a emulator)
 - **Cloud**: AWS (EC2, S3, Lambda, Route53)
 - **CDN**: CloudFlare
-- **Development**: Python 3.12+, CustomTkinter
+- **Development**: Python 3.12
 - **Database**: MySQL/MariaDB
 - **World Editing**: NoggIt
 - **Documentation**: Markdown, Mermaid diagrams
@@ -118,6 +117,22 @@ This project is created and maintained for **educational and portfolio demonstra
 
 **Fair Use Statement:** This project constitutes fair use for educational purposes, demonstrating software architecture, cloud computing, and technical documentation skills without commercial intent.
 
+## Planned Enhancements
+
+### Custom Game Launcher
+Python-based launcher for streamlined client distribution:
+- Automated client downloads from AWS S3
+- Patch management and version control
+- User-friendly GUI interface
+- Integration with game client launch
+
+### Infrastructure & DevOps
+- CI/CD pipeline for launcher deployment
+- Automated testing for Python launcher
+- Infrastructure as Code (Terraform) for AWS resources
+- Monitoring and alerting integration
+
+
 ## Contact
 
 **Kyle Dahgon**  
@@ -137,4 +152,4 @@ World of Warcraft® content is property of Blizzard Entertainment and not includ
 ---
 
 *This is a portfolio project demonstrating Solutions Architecture skills. Last updated: January 2026*# vanilla-gorilla
-technical repo for all Vanilla Gorilla work
+technical repo for all Gorilla Warfare work
