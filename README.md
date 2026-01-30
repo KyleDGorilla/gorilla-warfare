@@ -142,5 +142,5 @@ World of Warcraft® content is property of Blizzard Entertainment and not includ
 
 ---
 
-*This is a portfolio project demonstrating Solutions Architecture skills. Last updated: January 2026*# vanilla-gorilla
-technical repo for all Gorilla Warfare work
+*This is a portfolio project demonstrating Solutions Architecture and development skills. Last updated: January 2026*# gorilla-warfare
+technical repo for all Gorilla Warfare work.
