@@ -8,30 +8,21 @@ Gorilla Warfare is a custom World of Warcraft 3.3.5a private server showcasing h
 
 - Hybrid cloud infrastructure design (AWS + on-premises)
 - Database architecture and optimization
-- Custom application development (Python launcher with CI/CD)
 - Game world architecture documentation and modification
 - DevOps practices and automation
 
 ## Architecture
 
 **Hybrid Cloud Design:**
-- **Authserver**: AWS EC2 (t2.micro) with Lambda-based scheduling
+- **Authserver**: AWS EC2 (t2.micro)
 - **Worldserver**: Windows mini PC (local)
-- **Content Distribution**: AWS S3 + CloudFlare CDN
-- **DNS Management**: CloudFlare with automated AWS integration
+- **Content Distribution**: CloudFlare CDN
+- **DNS Management**: CloudFlare
 
 Full architecture documentation: [Architecture Portfolio](https://github.com/KyleDGorilla/architecture-portfolio/tree/main/projects/mmorpg-aws)
 
 ## Project Components
 
-### Custom Game Launcher
-Python-based launcher with:
-- Automated client distribution from AWS S3
-- Patch management and version control
-- CustomTkinter UI for user-friendly experience
-- Integration with game client launch
-
-📁 **Code**: [`/launcher`](./launcher)
 
 ### World Architecture Documentation
 Systematic documentation of game world architecture using arc42 methodology, demonstrating legacy system analysis and technical documentation skills.
